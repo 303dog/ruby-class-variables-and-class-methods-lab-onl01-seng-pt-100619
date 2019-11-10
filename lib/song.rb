@@ -22,6 +22,12 @@ class Song
     @@count
   end
   
+  def self.genres
+    if self.genres = genre do 
+      genre
+    end
+  end
+  
   def name
     @name = name
   end
