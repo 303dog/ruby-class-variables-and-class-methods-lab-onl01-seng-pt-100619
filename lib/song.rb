@@ -5,7 +5,7 @@ class Song
   
   @@count = 0 
   @@genres = []
-  @@artist = []
+  @@artists = []
   
   def initailize
     @@count += l 
@@ -37,6 +37,10 @@ class Song
     return @@genre_count
   end
   
+  def self.artist_count
+    @@artist_count = {}
+    
+    @@artists.group_by(&:itself).each {|k,v| @@artist_count[K] = 
   def name
     @name = name
   end
