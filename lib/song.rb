@@ -6,13 +6,13 @@ class Song
   @@count = 0 
   @@genres = []
   
-  def self.initalize(name, artist, genre)
-    @name = name
-    @artist = artist 
-    @genre = genre
-    @@count += 1 
-    @@genres << genre
-  end
+  # def self.initalize(name, artist, genre)
+  #   @name = name
+  #   @artist = artist 
+  #   @genre = genre
+  #   @@count += 1 
+  #   @@genres << genre
+  # end
  
  def name
    name
