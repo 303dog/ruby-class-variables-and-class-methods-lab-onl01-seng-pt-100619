@@ -6,7 +6,7 @@ class Song
   @@count = 0 
   @@genres = []
   
-  def initalize(name, artist, genre)
+  def self.initalize(name, artist, genre)
     @name = name
     @artist = artist 
     @genre = genre
