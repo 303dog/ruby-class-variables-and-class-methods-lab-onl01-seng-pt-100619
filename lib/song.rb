@@ -1,59 +1,47 @@
+class Song
 
-class Song 
+    attr_accessor :name, :artist, :genre
   
-  attr_accessor :name, :artist, :genre
-  
-  @@count = 0 
-  @@genres = []
-  @@artists = []
-  
-  def initailize
-    @@count += l 
-    @@artist << artist 
-    @@genres << genre
-  end
-  
-  def self.new(name, artist, genre)
-    self.new = name
-    self.new = artist
-    self.new = genre
-  end
-  
-  def self.count
-    @@count
-  end
-  
-  def self.genres
-    if self.genres = genre do 
-      genre
+    def initialize(name, artist, genre)
+      @name = name
+      @artist = artist
+      @genre = genre
+      @@count += 1
+      @@genres << genre
+      @@artists << artist
     end
-  end
   
-  def self.genre_count
-    @@genre_count = {}
+    @@count = 0
+  
+    def self.count
+      @@count
+    end
+  
+    @@genres = []
+  
+    def self.genres
+      @@genres = @@genres.uniq
+    end
+  
+    @@artists = []
+  
+    def self.artists
+      @@artists = @@artists.uniq
+    end
 
-    @@genres.group_by(&:itself).each {|k,v| @@genre_count[k] = v.count}
+    def self.genre_count
+        @@genre_count = {}
+       
+        @@genres.group_by(&:itself).each {|k,v| @@genre_count[k] = v.count}
+       
+        return @@genre_count
+    end
 
-    return @@genre_count
-  end
-  
-  def self.artist_count
-    @@artist_count = {}
-    
-    @@artists.group_by(&:itself).each {|k,v| @@artist_count[k] = v.count}
-  end
-  
-  def name
-    @name = name
-  end
-  
-  def artist
-    @artist = artist
-  end
-  
-  def genre
-    @genre = genre
-  end
-  
-end
-end
+    def self.artist_count
+        @@artist_count = {}
+       
+         @@artists.group_by(&:itself).each {|k,v| @@artist_count[k] = v.count}
+       
+        return @@artist_count
+       end
+end 
