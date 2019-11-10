@@ -8,10 +8,26 @@ class Song
   
   def initailize
     @@count += l 
+    @@artist = []
+    @@genres = []
+  end
+  
+  def self.new(name, artist, genre)
+    self.new = name
+    self.new = artist
+    self.new = genre
   end
   
   def name
     @name = name
+  end
+  
+  def artist
+    @artist = artist
+  end
+  
+  def genre
+    @genre = genre
   end
   
 end
