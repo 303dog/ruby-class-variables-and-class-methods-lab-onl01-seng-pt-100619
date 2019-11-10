@@ -14,15 +14,14 @@ class Song
   end
   
   def self.count
-    @@count
+    @@count = count 
   end
   
   def self.genres 
-    if self.genre != genre do 
-      @@genre << genre
-    else 
+    @genre = genre
   end
   
+  def genre
     
   
 end
