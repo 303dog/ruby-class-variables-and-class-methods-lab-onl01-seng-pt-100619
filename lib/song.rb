@@ -14,7 +14,7 @@ class Song
     @@genres << genre
   end
   
-  def self.new(name. artist, genre)
+  def self.new(name, artist, genre)
     self.new = name
     self.new = artist
     self.new = genre
